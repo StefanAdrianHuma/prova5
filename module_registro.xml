@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_registro" default="compile.module.registro">
+  <dirname property="module.registro.basedir" file="${ant.file.module_registro}"/>
+  
+  <property name="module.jdk.home.registro" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.registro" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.registro" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.registro" value="-encoding UTF-8 -source 13 -target 13 ${compiler.args}"/>
+  
+  <property name="registro.output.dir" value="${module.registro.basedir}/out/production/registro"/>
+  <property name="registro.testoutput.dir" value="${module.registro.basedir}/out/test/registro"/>
+  
+  <path id="registro.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="registro.module.production.classpath">
+    <path refid="${module.jdk.classpath.registro}"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql-connector-java-8.0.19.classpath"/>
+  </path>
+  
+  <path id="registro.runtime.production.module.classpath">
+    <pathelement location="${registro.output.dir}"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql-connector-java-8.0.19.classpath"/>
+  </path>
+  
+  <path id="registro.module.classpath">
+    <path refid="${module.jdk.classpath.registro}"/>
+    <pathelement location="${registro.output.dir}"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql-connector-java-8.0.19.classpath"/>
+  </path>
+  
+  <path id="registro.runtime.module.classpath">
+    <pathelement location="${registro.testoutput.dir}"/>
+    <pathelement location="${registro.output.dir}"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql-connector-java-8.0.19.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.registro">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.registro">
+    <patternset refid="excluded.from.module.registro"/>
+  </patternset>
+  
+  <path id="registro.module.sourcepath">
+    <dirset dir="${module.registro.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.registro" depends="compile.module.registro.production,compile.module.registro.tests" description="Compile module registro"/>
+  
+  <target name="compile.module.registro.production" depends="register.custom.compilers" description="Compile module registro; production classes">
+    <mkdir dir="${registro.output.dir}"/>
+    <javac2 destdir="${registro.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.registro}/javac">
+      <compilerarg line="${compiler.args.registro}"/>
+      <bootclasspath refid="registro.module.bootclasspath"/>
+      <classpath refid="registro.module.production.classpath"/>
+      <src refid="registro.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.registro"/>
+    </javac2>
+    
+    <copy todir="${registro.output.dir}">
+      <fileset dir="${module.registro.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.registro.tests" depends="register.custom.compilers,compile.module.registro.production" description="compile module registro; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.registro" description="cleanup module">
+    <delete dir="${registro.output.dir}"/>
+    <delete dir="${registro.testoutput.dir}"/>
+  </target>
+</project>
