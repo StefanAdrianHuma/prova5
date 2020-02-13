@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Java EE 6-Java EE 6">
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.transaction.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.jms.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.annotation.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.servlet.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.servlet.jsp.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.persistence.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.ejb.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.resource.jar" />
+    <archive path="C:/Users/stefa/Desktop/Progetto/trunk/lib/javax.servlet.jsp.jstl.jar" />
+  </library>
+  <library name="lib">
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/src.zip" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx-swt.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.web.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.base.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.fxml.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.media.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.swing.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.controls.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.graphics.jar" />
+  </library>
+  <library name="lib1">
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/src.zip" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx-swt.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.web.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.base.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.fxml.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.media.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.swing.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.controls.jar" />
+    <archive path="C:/Users/stefa/.IntelliJIdea2019.3/javafx-sdk-11.0.2/lib/javafx.graphics.jar" />
+  </library>
+  <library name="mysql-connector-java-8.0.19">
+    <archive path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.19.jar" />
+  </library>
+  <library name="mysql:mysql-connector-java:8.0.19">
+    <archive path="C:/Users/stefa/.m2/repository/mysql/mysql-connector-java/8.0.19/mysql-connector-java-8.0.19.jar" />
+    <archive path="C:/Users/stefa/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar" />
+  </library>
+</eclipse-userlibraries>
+
